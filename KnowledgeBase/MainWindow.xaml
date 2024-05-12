@@ -1,0 +1,64 @@
+﻿<Window
+    x:Class="KnowledgeBase.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:KnowledgeBase"
+    mc:Ignorable="d"
+    d:DesignHeight="900"
+    Title="MainWindow"
+    d:DesignWidth="1600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition
+                    Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="1"
+                Height="48"
+                Orientation="Horizontal">
+                <Button
+                    Content="&#xE710;"
+                    Style="{DynamicResource Button.Standart.IconOnly}"/>
+                <Button
+                    Content="&#xE70F;"
+                    Style="{DynamicResource Button.Standart.IconOnly}"/>
+                <Button
+                    Content="&#xE74D;"
+                    Style="{DynamicResource Button.Standart.IconOnly}"/>
+                <GridSplitter
+                    BorderBrush="{DynamicResource Light.StrokeColor.DividerStroke.Default}"
+                    BorderThickness="1"
+                    IsEnabled="False"
+                    Margin="0,4"
+                    Width="1"/>
+                <Button
+                    x:Name="Tags"
+                    Content="Тэги"
+                    Style="{DynamicResource Button.Standart.IconBefore}"
+                    Uid="&#xE8EC;"
+                    Click="Tags_Click"/>
+                <Button
+                    x:Name="Softs"
+                    Content="Системы"
+                    Style="{DynamicResource Button.Standart.IconBefore}"
+                    Uid="&#xE737;"
+                    Click="Softs_Click"/>
+                <Button
+                    x:Name="Answers"
+                    Content="Ответы"
+                    Style="{DynamicResource Button.Standart.IconBefore}"
+                    Uid="&#xE8F2;"
+                    Click="Answers_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

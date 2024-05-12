@@ -1,0 +1,796 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style
+        x:Key="Button.Accent.TextOnly"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Background"
+            Value="{DynamicResource Light.FillColor.Accent.Default}"/>
+        <Setter
+            Property="BorderBrush"
+            Value="{DynamicResource Light.Elevation.AccentControl.Border}"/>
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{DynamicResource FocusRect}"/>
+        <Setter
+            Property="FontFamily"
+            Value="Segoe UI Variable Static Display"/>
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+        <Setter
+            Property="Foreground"
+            Value="{DynamicResource Ligth.FillColor.TextOnAccent.Primary}"/>
+        <Setter
+            Property="Height"
+            Value="32"/>
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Margin"
+            Value="4"/>
+        <Setter
+            Property="MaxHeight"
+            Value="32"/>
+        <Setter
+            Property="MaxWidth"
+            Value="120"/>
+        <Setter
+            Property="Padding"
+            Value="12,6"/>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Focusable="False"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Secondary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.Elevation.AccentControl.Border}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Primary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Tertiary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.OnAccentDefault}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Disabled}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="Transparent"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Width"
+            Value="120"/>
+    </Style>
+    <Style
+        x:Key="Button.Standart.TextOnly"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Background"
+            Value="{DynamicResource Light.FillColor.Control.Default}"/>
+        <Setter
+            Property="BorderBrush"
+            Value="{DynamicResource Light.Elevation.Control.Border}"/>
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{DynamicResource FocusRect}"/>
+        <Setter
+            Property="FontFamily"
+            Value="Segoe UI Variable Static Display"/>
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+        <Setter
+            Property="Foreground"
+            Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+        <Setter
+            Property="Height"
+            Value="32"/>
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Margin"
+            Value="4"/>
+        <Setter
+            Property="MaxHeight"
+            Value="32"/>
+        <Setter
+            Property="MaxWidth"
+            Value="120"/>
+        <Setter
+            Property="Padding"
+            Value="12,6"/>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Focusable="False"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Secondary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.Elevation.Control.Border}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Tertiary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.Default}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Disabled}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.Default}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Width"
+            Value="120"/>
+    </Style>
+    <Style
+        x:Key="Button.Accent.IconBefore"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Background"
+            Value="{DynamicResource Light.FillColor.Accent.Default}"/>
+        <Setter
+            Property="BorderBrush"
+            Value="{DynamicResource Light.Elevation.AccentControl.Border}"/>
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{DynamicResource FocusRect}"/>
+        <Setter
+            Property="FontFamily"
+            Value="Segoe UI Variable Static Display"/>
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+        <Setter
+            Property="Foreground"
+            Value="{DynamicResource Ligth.FillColor.TextOnAccent.Primary}"/>
+        <Setter
+            Property="Height"
+            Value="32"/>
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Margin"
+            Value="4"/>
+        <Setter
+            Property="MaxHeight"
+            Value="32"/>
+        <Setter
+            Property="MaxWidth"
+            Value="120"/>
+        <Setter
+            Property="Padding"
+            Value="12,6"/>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                x:Name="Icon"
+                                Focusable="False"
+                                FontFamily="Segoe Fluent Icons"
+                                FontSize="14"
+                                Foreground="{TemplateBinding Foreground}"
+                                HorizontalAlignment="Center"
+                                Text="{TemplateBinding Uid}"
+                                VerticalAlignment="Center"/>
+                            <ContentPresenter
+                                x:Name="ContentPresenter"
+                                Focusable="False"
+                                Grid.Column="1"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Secondary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.Elevation.AccentControl.Border}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Primary}"/>
+                            <Setter
+                                Property="Foreground"
+                                TargetName="Icon"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Primary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Tertiary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.OnAccentDefault}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Secondary}"/>
+                            <Setter
+                                Property="Foreground"
+                                TargetName="Icon"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Disabled}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="Transparent"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Disabled}"/>
+                            <Setter
+                                Property="Foreground"
+                                TargetName="Icon"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Width"
+            Value="120"/>
+    </Style>
+    <Style
+        x:Key="Button.Standart.IconBefore"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Background"
+            Value="{DynamicResource Light.FillColor.Control.Default}"/>
+        <Setter
+            Property="BorderBrush"
+            Value="{DynamicResource Light.Elevation.Control.Border}"/>
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{DynamicResource FocusRect}"/>
+        <Setter
+            Property="FontFamily"
+            Value="Segoe UI Variable Static Display"/>
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+        <Setter
+            Property="Foreground"
+            Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+        <Setter
+            Property="Height"
+            Value="32"/>
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Margin"
+            Value="4"/>
+        <Setter
+            Property="MaxHeight"
+            Value="32"/>
+        <Setter
+            Property="MaxWidth"
+            Value="120"/>
+        <Setter
+            Property="Padding"
+            Value="12,6"/>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                x:Name="Icon"
+                                Focusable="False"
+                                FontFamily="Segoe Fluent Icons"
+                                FontSize="14"
+                                Foreground="{TemplateBinding Foreground}"
+                                HorizontalAlignment="Center"
+                                Text="{TemplateBinding Uid}"
+                                VerticalAlignment="Center"/>
+                            <ContentPresenter
+                                x:Name="ContentPresenter"
+                                Focusable="False"
+                                Grid.Column="1"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Secondary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.Elevation.Control.Border}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+                            <Setter
+                                Property="Foreground"
+                                TargetName="Icon"
+                                Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Tertiary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.Default}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Secondary}"/>
+                            <Setter
+                                Property="Foreground"
+                                TargetName="Icon"
+                                Value="{DynamicResource Light.FillColor.Text.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Disabled}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.Default}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Disabled}"/>
+                            <Setter
+                                Property="Foreground"
+                                TargetName="Icon"
+                                Value="{DynamicResource Light.FillColor.Text.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Width"
+            Value="120"/>
+    </Style>
+    <Style
+        x:Key="Button.Accent.IconOnly"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Background"
+            Value="{DynamicResource Light.FillColor.Accent.Default}"/>
+        <Setter
+            Property="BorderBrush"
+            Value="{DynamicResource Light.Elevation.AccentControl.Border}"/>
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{DynamicResource FocusRect}"/>
+        <Setter
+            Property="FontFamily"
+            Value="Segoe Fluent Icons"/>
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+        <Setter
+            Property="Foreground"
+            Value="{DynamicResource Ligth.FillColor.TextOnAccent.Primary}"/>
+        <Setter
+            Property="Height"
+            Value="30"/>
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Margin"
+            Value="4"/>
+        <Setter
+            Property="MaxHeight"
+            Value="30"/>
+        <Setter
+            Property="MaxWidth"
+            Value="30"/>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Focusable="False"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Secondary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.Elevation.AccentControl.Border}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Tertiary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.OnAccentDefault}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Accent.Disabled}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="Transparent"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Ligth.FillColor.TextOnAccent.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Width"
+            Value="30"/>
+    </Style>
+    <Style
+        x:Key="Button.Standart.IconOnly"
+        TargetType="{x:Type Button}">
+        <Setter
+            Property="Background"
+            Value="{DynamicResource Light.FillColor.Control.Default}"/>
+        <Setter
+            Property="BorderBrush"
+            Value="{DynamicResource Light.Elevation.Control.Border}"/>
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+        <Setter
+            Property="FocusVisualStyle"
+            Value="{DynamicResource FocusRect}"/>
+        <Setter
+            Property="FontFamily"
+            Value="Segoe Fluent Icons"/>
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+        <Setter
+            Property="Foreground"
+            Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+        <Setter
+            Property="Height"
+            Value="30"/>
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Margin"
+            Value="4"/>
+        <Setter
+            Property="MaxHeight"
+            Value="30"/>
+        <Setter
+            Property="MaxWidth"
+            Value="30"/>
+        <Setter
+            Property="Template">
+            <Setter.Value>
+                <ControlTemplate
+                    TargetType="{x:Type Button}">
+                    <Border
+                        x:Name="Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        SnapsToDevicePixels="True">
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Focusable="False"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            Margin="{TemplateBinding Padding}"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger
+                            Property="IsMouseOver"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Secondary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.Elevation.Control.Border}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Primary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsPressed"
+                            Value="True">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Tertiary}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.Default}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Secondary}"/>
+                        </Trigger>
+                        <Trigger
+                            Property="IsEnabled"
+                            Value="False">
+                            <Setter
+                                Property="Background"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.FillColor.Control.Disabled}"/>
+                            <Setter
+                                Property="BorderBrush"
+                                TargetName="Border"
+                                Value="{DynamicResource Light.StrokeColor.ControlStroke.Default}"/>
+                            <Setter
+                                Property="TextElement.Foreground"
+                                TargetName="ContentPresenter"
+                                Value="{DynamicResource Light.FillColor.Text.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter
+            Property="VerticalContentAlignment"
+            Value="Center"/>
+        <Setter
+            Property="Width"
+            Value="30"/>
+    </Style>
+</ResourceDictionary>

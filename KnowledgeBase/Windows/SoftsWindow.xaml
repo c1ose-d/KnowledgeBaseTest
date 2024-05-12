@@ -1,0 +1,63 @@
+﻿<Window
+    x:Class="KnowledgeBase.Windows.SoftsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:KnowledgeBase.Windows"
+    mc:Ignorable="d"
+    d:DesignHeight="500"
+    Title="SoftsWindow"
+    d:DesignWidth="500"
+    Height="500"
+    Width="500"
+    Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto"/>
+            <RowDefinition
+                 x:Name="RowDefinition"/>
+        </Grid.RowDefinitions>
+        <RichTextBox/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition
+                    Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="1"
+                Height="48"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="Add"
+                    Content="&#xE710;"
+                    Style="{DynamicResource Button.Standart.IconOnly}"
+                    Click="Add_Click"/>
+                <Button
+                    x:Name="Edit"
+                    Content="&#xE70F;"
+                    Style="{DynamicResource Button.Standart.IconOnly}"
+                    Click="Edit_Click"/>
+                <Button
+                    x:Name="Delete"
+                    Content="&#xE74D;"
+                    Style="{DynamicResource Button.Standart.IconOnly}"
+                    Click="Delete_Click"/>
+                <Button
+                    x:Name="Cancel"
+                    Content="&#xE711;"
+                    Style="{DynamicResource Button.Accent.IconOnly}"
+                    Visibility="Collapsed"
+                    Click="Cancel_Click"/>
+            </StackPanel>
+        </Grid>
+        <ListView
+            x:Name="ListView"
+            Grid.Row="1"
+            Style="{DynamicResource ListView}"
+            MouseDoubleClick="ListView_MouseDoubleClick"
+            SelectionChanged="ListView_SelectionChanged"/>
+    </Grid>
+</Window>
